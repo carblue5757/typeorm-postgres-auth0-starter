@@ -1,0 +1,25 @@
+{
+  "name": "typeorm-pg-test",
+  "version": "0.0.1",
+  "description": "Awesome project developed with TypeORM.",
+  "devDependencies": {
+    "@types/node": "^8.0.29",
+    "nodemon": "^2.0.1",
+    "ts-node": "^3.3.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "fastify": "^2.10.0",
+    "fastify-plugin": "^1.6.0",
+    "inversify": "^5.0.1",
+    "pg": "^7.14.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.20"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc --sourceMap -p ./",
+    "dev": "nodemon -L -e ts --watch ./src -P 250 --nolazy --exec \"tsc && node --inspect=0.0.0.0:5252 dist/index.js\"",
+    "start": "node ./dist/index.js",
+    "watch": "nodemon src/index.ts"
+  }
+}
